@@ -6,6 +6,8 @@ import MealsPage from '../pages/MealsPage';
 import WorkoutsPage from '../pages/WorkoutsPage';
 import WeightPage from '../pages/WeightPage';
 import HistoryPage from '../pages/HistoryPage';
+import RecipesPage from '../pages/RecipesPage';
+import GroceryListPage from '../pages/GroceryListPage';
 import ProtectedRoute from './ProtectedRoute';
 import Layout from '../components/layout/Layout';
 
@@ -60,6 +62,26 @@ function AppRoutes() {
           <ProtectedRoute>
             <Layout>
               <HistoryPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/recipes"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <RecipesPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/grocery-lists"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <GroceryListPage />
             </Layout>
           </ProtectedRoute>
         }
