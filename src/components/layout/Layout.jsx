@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
-import { LogOut, LayoutDashboard } from 'lucide-react';
+import { LogOut, LayoutDashboard, UtensilsCrossed } from 'lucide-react';
 
 function Layout({ children }) {
   const { user, logout } = useAuth();
@@ -9,7 +9,7 @@ function Layout({ children }) {
     <div className="min-h-screen bg-slate-50">
       <header className="bg-white border-b border-slate-200">
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <span className="text-lg font-semibold text-emerald-600">NutriFit</span>
+          <span className="font-display text-lg font-bold text-emerald-600">NutriFit</span>
 
           <nav className="flex items-center gap-6">
             <Link
@@ -18,6 +18,13 @@ function Layout({ children }) {
             >
               <LayoutDashboard size={16} />
               Dashboard
+            </Link>
+            <Link
+              to="/meals"
+              className="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-emerald-600"
+            >
+              <UtensilsCrossed size={16} />
+              Meals
             </Link>
           </nav>
 
