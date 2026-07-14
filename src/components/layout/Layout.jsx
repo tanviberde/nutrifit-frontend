@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
-import { LogOut, LayoutDashboard, UtensilsCrossed } from 'lucide-react';
+import { LogOut, LayoutDashboard, UtensilsCrossed, Dumbbell } from 'lucide-react';
 
 function Layout({ children }) {
   const { user, logout } = useAuth();
@@ -25,6 +25,13 @@ function Layout({ children }) {
             >
               <UtensilsCrossed size={16} />
               Meals
+            </Link>
+            <Link
+              to="/workouts"
+              className="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-emerald-600"
+            >
+              <Dumbbell size={16} />
+              Workouts
             </Link>
           </nav>
 

@@ -3,6 +3,7 @@ import LoginPage from '../pages/LoginPage';
 import RegisterPage from '../pages/RegisterPage';
 import DashboardPage from '../pages/DashboardPage';
 import MealsPage from '../pages/MealsPage';
+import WorkoutsPage from '../pages/WorkoutsPage';
 import ProtectedRoute from './ProtectedRoute';
 import Layout from '../components/layout/Layout';
 
@@ -27,6 +28,16 @@ function AppRoutes() {
           <ProtectedRoute>
             <Layout>
               <MealsPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/workouts"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <WorkoutsPage />
             </Layout>
           </ProtectedRoute>
         }
