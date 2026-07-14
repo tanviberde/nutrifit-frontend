@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
-import { LogOut, LayoutDashboard, UtensilsCrossed, Dumbbell, Scale } from 'lucide-react';
+import { LogOut, LayoutDashboard, UtensilsCrossed, Dumbbell, Scale, History } from 'lucide-react';
+
 
 function Layout({ children }) {
   const { user, logout } = useAuth();
@@ -39,6 +40,13 @@ function Layout({ children }) {
             >
               <Scale size={16} />
               Weight
+            </Link>
+            <Link
+              to="/history"
+              className="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-emerald-600"
+            >
+              <History size={16} />
+              History
             </Link>
           </nav>
 

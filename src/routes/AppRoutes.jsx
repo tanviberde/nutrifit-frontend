@@ -5,6 +5,7 @@ import DashboardPage from '../pages/DashboardPage';
 import MealsPage from '../pages/MealsPage';
 import WorkoutsPage from '../pages/WorkoutsPage';
 import WeightPage from '../pages/WeightPage';
+import HistoryPage from '../pages/HistoryPage';
 import ProtectedRoute from './ProtectedRoute';
 import Layout from '../components/layout/Layout';
 
@@ -49,6 +50,16 @@ function AppRoutes() {
           <ProtectedRoute>
             <Layout>
               <WeightPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/history"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <HistoryPage />
             </Layout>
           </ProtectedRoute>
         }
