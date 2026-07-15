@@ -10,6 +10,7 @@ import RecipesPage from '../pages/RecipesPage';
 import GroceryListPage from '../pages/GroceryListPage';
 import RoutinesPage from '../pages/RoutinesPage';
 import ReportsPage from '../pages/ReportsPage';
+import ProfilePage from '../pages/ProfilePage';
 import ProtectedRoute from './ProtectedRoute';
 import Layout from '../components/layout/Layout';
 
@@ -104,6 +105,16 @@ function AppRoutes() {
           <ProtectedRoute>
             <Layout>
               <ReportsPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/profile"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <ProfilePage />
             </Layout>
           </ProtectedRoute>
         }

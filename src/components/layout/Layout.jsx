@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
-import { LogOut, LayoutDashboard, UtensilsCrossed, Dumbbell, Scale, History, ChefHat, ShoppingCart, ListChecks, Sparkles } from 'lucide-react';
+import { LogOut, LayoutDashboard, UtensilsCrossed, Dumbbell, Scale, History, ChefHat, ShoppingCart, ListChecks, Sparkles, UserCircle } from 'lucide-react';
 function Layout({ children }) {
   const { user, logout } = useAuth();
 
@@ -77,7 +77,13 @@ function Layout({ children }) {
           </nav>
 
           <div className="flex items-center gap-3">
-            <span className="text-sm text-slate-500">{user?.name}</span>
+            <Link
+              to="/profile"
+              className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-emerald-600 transition-colors"
+            >
+              <UserCircle size={16} />
+              {user?.name}
+            </Link>
             <button
               onClick={logout}
               className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-red-600 transition-colors"
