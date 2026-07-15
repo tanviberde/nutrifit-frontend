@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
-import { LogOut, LayoutDashboard, UtensilsCrossed, Dumbbell, Scale, History, ChefHat, ShoppingCart, ListChecks } from 'lucide-react';
-
+import { LogOut, LayoutDashboard, UtensilsCrossed, Dumbbell, Scale, History, ChefHat, ShoppingCart, ListChecks, Sparkles } from 'lucide-react';
 function Layout({ children }) {
   const { user, logout } = useAuth();
 
@@ -67,6 +66,13 @@ function Layout({ children }) {
             >
               <ListChecks size={16} />
               Routines
+            </Link>
+            <Link
+              to="/reports"
+              className="flex items-center gap-1.5 text-sm font-medium text-slate-600 hover:text-emerald-600"
+            >
+              <Sparkles size={16} />
+              AI Insights
             </Link>
           </nav>
 

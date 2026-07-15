@@ -9,6 +9,7 @@ import HistoryPage from '../pages/HistoryPage';
 import RecipesPage from '../pages/RecipesPage';
 import GroceryListPage from '../pages/GroceryListPage';
 import RoutinesPage from '../pages/RoutinesPage';
+import ReportsPage from '../pages/ReportsPage';
 import ProtectedRoute from './ProtectedRoute';
 import Layout from '../components/layout/Layout';
 
@@ -93,6 +94,16 @@ function AppRoutes() {
           <ProtectedRoute>
             <Layout>
               <RoutinesPage />
+            </Layout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/reports"
+        element={
+          <ProtectedRoute>
+            <Layout>
+              <ReportsPage />
             </Layout>
           </ProtectedRoute>
         }
